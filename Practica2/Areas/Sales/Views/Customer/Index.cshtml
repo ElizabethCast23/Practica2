@@ -1,0 +1,98 @@
+﻿@model Practica2.Customer;
+@{
+    Layout = null;
+    ViewData["Title"] = "Customers";
+
+    var cu1 = ViewData["1"] as Practica2.Customer;
+    var cu2 = ViewData["2"] as Practica2.Customer;
+    var cu3= ViewData["3"] as Practica2.Customer;
+    var cu4 = ViewData["4"] as Practica2.Customer;
+    var cu5 = ViewData["5"] as Practica2.Customer;
+
+
+
+}
+
+<html>
+    <head>
+        <h1>@ViewData["Title"]</h1>
+        <p>tabla de datos de customers</p>
+      
+    </head>
+        
+        <style type="text/css">
+        table,th,td{
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        th,td{
+           padding: 8px;
+        }
+        td{
+           text-align: left;
+
+        }
+    </style>
+
+    <body>
+        <table style="width: 100%" class="table">
+            <tr >
+                <th>id</th>
+                <th>dni</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Phone</th>
+            </tr>
+
+            <tr>
+                 <td>@cu1.Id</td>
+                 <td>@cu1.dni</td>
+                 <td>@cu1.FullName</td>
+                 <td>@cu1.email</td>
+                 <td>@cu1.country</td>
+                 <td>@cu1.phone</td>
+            </tr>
+
+             <tr>
+                 <td>@cu2.Id</td>
+                 <td>@cu2.dni</td>
+                 <td>@cu2.FullName</td>
+                 <td>@cu2.email</td>
+                 <td>@cu2.country</td>
+                 <td>@cu2.phone</td>
+            </tr>
+
+             <tr>
+                  <td>@cu3.Id</td>
+                 <td>@cu3.dni</td>
+                 <td>@cu3.FullName</td>
+                 <td>@cu3.email</td>
+                 <td>@cu3.country</td>
+                 <td>@cu3.phone</td>
+            </tr>
+
+             <tr>
+                  <td>@cu4.Id</td>
+                 <td>@cu4.dni</td>
+                 <td>@cu4.FullName</td>
+                 <td>@cu4.email</td>
+                 <td>@cu4.country</td>
+                 <td>@cu4.phone</td>
+            </tr>
+
+             <tr>
+                  <td>@cu5.Id</td>
+                 <td>@cu5.dni</td>
+                 <td>@cu5.FullName</td>
+                 <td>@cu5.email</td>
+                 <td>@cu5.country</td>
+                 <td>@cu5.phone</td>
+            </tr>
+ 
+        </table>
+
+
+    </body>
+
+</html>

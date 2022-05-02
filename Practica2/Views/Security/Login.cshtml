@@ -1,0 +1,86 @@
+﻿@{
+
+    Layout = null;
+    //Codigo Shrak para ecriber grandes cantidades de codigo
+    //Preciona F10 Para que corra debido al foco
+
+    var mensajeBienvenidad = ViewData["Bienvenida"];
+    if (ViewData["Bienvenida"] == null)
+    {
+        mensajeBienvenidad = "Bienvenido";
+    }
+}
+
+
+
+@{
+    //// Insertar la base de diseño layout bostraack
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WEBpracticando</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WEBpracticando.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container col-md-3" style="margin-top: 10%; "> 
+
+ @* <div class="container">       Lineas de tamaño standar*@
+
+        @{
+            //iNICIO
+
+        }
+
+        <h3>Este es un Login </h3>
+        <h3>@mensajeBienvenidad</h3>
+        <h5>Año @ViewData["Año"]</h5>
+
+        <form method="post" action="@Url.Action("Validate","Security")">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                <input type="text" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"> We'll newver share your email with anyone else</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPasssword1" class="form-label">Contraseña</label>
+                <input type="password"name="clave" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sumit</button>
+
+        </form>
+
+
+        @{
+            //Fin
+        }
+
+
+
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
+
+
+
+@{
+    //Fin de la insercion
+}
+
